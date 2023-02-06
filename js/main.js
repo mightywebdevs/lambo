@@ -1,25 +1,27 @@
+const menuBtn = document.querySelector('.menu-btn')
+const menuMobile = document.querySelector('.menu-mobile')
+
+function toggleMobileMenu() {
+    menuMobile.classList.toggle('menu--open')
+}
+
+menuBtn.onclick = toggleMobileMenu
+
 const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    // direction: 'vertical',
     loop: true,
-    slidesPerView: 2,
-    spaceBetween: 20,
-  
-    // If we need pagination
-    // pagination: {
-    //   el: '.swiper-pagination',
-    // },
-  
-    // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-right',
       prevEl: '.swiper-button-left',
     },
-  
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
+    breakpoints: {
+        0: {
+            slidesPerView: 1
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        }
+    }
   });
 
 let map;
