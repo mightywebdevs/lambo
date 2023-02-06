@@ -647,7 +647,8 @@ a {
     }
     .blog,
     .blog__slider,
-    .evo {
+    .evo,
+    .info {
         margin-bottom: 50px;
     }
     .footer {
